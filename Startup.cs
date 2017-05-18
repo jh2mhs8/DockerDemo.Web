@@ -37,8 +37,8 @@ namespace DockerDemo.Web
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseDefaultFiles();            
             app.UseStaticFiles();
-            app.UseDefaultFiles();
 
             app.UseMvc();
         }
